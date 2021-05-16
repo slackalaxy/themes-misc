@@ -1,0 +1,10 @@
+[GdmGreeterTheme]
+Version=4.0
+Encoding=UTF-8
+Name=GdmGreeterTheme.desktop
+Greeter=configuration.xml
+Name=Soft Flower Gnome
+Description=Spring is coming :)
+Author=Solarfields
+Copyright=GPL
+Screenshot=screenshot.jpg

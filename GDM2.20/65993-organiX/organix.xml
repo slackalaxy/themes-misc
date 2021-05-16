@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE greeter SYSTEM "greeter.dtd">
+<greeter>
+
+  <!-- background -->
+  <item type="pixmap">
+    <normal file="background.jpg"/>
+    <pos y="0" x="0" width="100%" height="100%"/>
+  </item>
+
+  <!-- bottom bar left round corner -->
+  <item type="rect">
+    <pos x="50%" y="100%" anchor="s" width="box" height="box"/>
+    <box orientation="horizontal">
+      <item type="rect">
+        <pos x="50%" anchor="n" width="box" height="box"/>
+        <box orientation="vertical">
+          <item type="pixmap">
+	    <normal file="curve-top_left.png" alpha="0"/>
+            <pos x="50%" anchor="n"/>
+          </item>
+          <item type="rect">
+	    <normal color="#000000" alpha="0"/>
+            <pos x="50%" anchor="n" height="30" width="10"/>
+          </item>
+        </box>
+      </item>
+
+      <!-- bottom bar -->
+      <item type="rect">
+        <normal color="#000000" alpha="0"/>
+        <pos y="100%" x="50%" width="box" height="40" anchor="s"/>
+        <box xpadding="10" ypadding="10" spacing="10" orientation="horizontal">
+
+          <!-- halt -->
+          <item type="rect" id="halt_button" button="true">
+            <show type="halt" modes="console"/>
+            <pos y="50%" width="box" height="box" anchor="w"/>
+            <box xpadding="0" spacing="2" orientation="horizontal">
+              <item type="pixmap">
+                <normal file="arrow_left.png" alpha="1.00" tint="#ffffff"/>
+                <prelight file="arrow_right.png" alpha="1.00" tint="#dce2e5"/>
+                <active file="arrow_up.png" alpha="1.00" tint="#a9b3b7"/>
+                <pos y="50%" anchor="w"/>
+              </item>
+              <item type="label">
+                <normal font="Bitstream Vera Sans Bold 10" color="#ffffff"/>
+                <prelight font="Bitstream Vera Sans Bold 10" color="#dce2e5"/>
+                <active font="Bitstream Vera Sans Bold 10" color="#a9b3b7"/>
+                <pos y="50%" anchor="w"/>
+                <stock type="halt"/>
+              </item>
+              <item type="pixmap">
+                <normal file="arrow_right.png" alpha="1.00" tint="#ffffff"/>
+                <prelight file="arrow_left.png" alpha="1.00" tint="#dce2e5"/>
+                <active file="arrow_up.png" alpha="1.00" tint="#a9b3b7"/>
+                <pos y="50%" anchor="w"/>
+              </item>
+             </box>
+          </item>
+    
+          <!-- reboot -->
+          <item type="rect" id="reboot_button" button="true">
+            <show type="reboot" modes="console"/>
+            <pos y="50%" width="box" height="box" anchor="w"/>
+            <box xpadding="0" spacing="2" orientation="horizontal">
+              <item type="pixmap">
+                <normal file="arrow_left.png" alpha="1.00" tint="#ffffff"/>
+                <prelight file="arrow_right.png" alpha="1.00" tint="#dce2e5"/>
+                <active file="arrow_up.png" alpha="1.00" tint="#a9b3b7"/>
+                <pos y="50%" anchor="w"/>
+              </item>
+              <item type="label">
+                <normal font="Bitstream Vera Sans Bold 10" color="#ffffff"/>
+                <prelight font="Bitstream Vera Sans Bold 10" color="#dce2e5"/>
+                <active font="Bitstream Vera Sans Bold 10" color="#a9b3b7"/>
+                <pos y="50%" anchor="w"/>
+                <stock type="reboot"/>
+              </item>
+              <item type="pixmap">
+                <normal file="arrow_right.png" alpha="1.00" tint="#ffffff"/>
+                <prelight file="arrow_left.png" alpha="1.00" tint="#dce2e5"/>
+                <active file="arrow_up.png" alpha="1.00" tint="#a9b3b7"/>
+                <pos y="50%" anchor="w"/>
+              </item>
+            </box>
+          </item>
+    
+          <!-- quit / disconnect -->
+          <item type="rect" id="disconnect_button" button="true">
+            <normal/>
+            <show modes="flexi,remote"/>
+            <pos y="50%" width="box" height="box" anchor="w"/>
+            <box xpadding="0" spacing="2" orientation="horizontal">
+              <item type="pixmap">
+                <normal file="arrow_left.png" alpha="1.00" tint="#ffffff"/>
+                <prelight file="arrow_right.png" alpha="1.00" tint="#dce2e5"/>
+                <active file="arrow_up.png" alpha="1.00" tint="#a9b3b7"/>
+                <pos y="50%" anchor="w"/>
+              </item>
+              <item type="label">
+                <normal font="Bitstream Vera Sans Bold 10" color="#ffffff"/>
+                <prelight font="Bitstream Vera Sans Bold 10" color="#dce2e5"/>
+                <active font="Bitstream Vera Sans Bold 10" color="#a9b3b7"/>
+                <pos y="50%" anchor="w"/>
+                <stock type="disconnect"/>
+                <show modes="remote"/>
+              </item>
+              <item type="label">
+                <normal font="Bitstream Vera Sans Bold 10" color="#ffffff"/>
+                <prelight font="Bitstream Vera Sans Bold 10" color="#dce2e5"/>
+                <active font="Bitstream Vera Sans Bold 10" color="#a9b3b7"/>
+                <pos y="50%" anchor="w"/>
+                <stock type="quit"/>
+                <show modes="flexi"/>
+              </item>
+              <item type="pixmap">
+                <normal file="arrow_right.png" alpha="1.00" tint="#ffffff"/>
+                <prelight file="arrow_left.png" alpha="1.00" tint="#dce2e5"/>
+                <active file="arrow_up.png" alpha="1.00" tint="#a9b3b7"/>
+                <pos y="50%" anchor="w"/>
+              </item>
+            </box>
+          </item>
+        </box>
+      </item>
+
+      <!-- bottom bar right round corner -->
+      <item type="rect">
+        <pos x="50%" anchor="n" width="box" height="box"/>
+        <box orientation="vertical">
+          <item type="pixmap">
+            <normal file="curve-top_right.png" alpha="0"/>
+            <pos x="50%" anchor="n"/>
+          </item>
+          <item type="rect">
+            <normal color="#000000" alpha="0"/>
+            <pos x="50%" anchor="n" height="30" width="10"/>
+          </item>
+        </box>
+      </item>
+    </box>
+  </item>
+
+  <!-- top bar left round corner -->
+  <item type="rect">
+    <pos x="50%" y="0%" anchor="n" width="box" height="box"/>
+    <box orientation="horizontal">
+      <item type="rect">
+        <pos x="50%" anchor="n" width="box" height="box"/>
+        <box orientation="vertical">
+          <item type="rect">
+	    <normal color="#000000" alpha="0"/>
+            <pos x="50%" anchor="n" height="32" width="10"/>
+          </item>
+          <item type="pixmap">
+            <normal file="curve-bottom_left.png" alpha="0"/>
+            <pos x="50%" anchor="n"/>
+          </item>
+        </box>
+      </item>
+
+      <!-- hostname and clock -->
+      <item type="rect">
+        <normal color="#000000" alpha="0"/>
+        <pos x="50%" y="0%" width="box" height="42" anchor="n"/>
+        <box xpadding="10" spacing="10" orientation="horizontal">
+          <item type="label">
+            <pos x="100%" y="50%" anchor="e"/>
+            <normal font="Bitstream Vera Sans Bold 10" color="#ffffff"/>
+            <text>%h //</text>
+          </item>
+          <item type="label" id="clock">
+            <pos x="100%" y="50%" anchor="e"/>
+            <normal font="Bitstream Vera Sans 10" color="#ffffff"/>
+            <text>%c</text>
+          </item>
+        </box>
+      </item>
+
+      <!-- top bar right round corner -->
+      <item type="rect">
+        <pos x="50%" anchor="n" width="box" height="box"/>
+        <box orientation="vertical">
+          <item type="rect">
+            <normal color="#000000" alpha="0"/>
+            <pos x="50%" anchor="n" height="32" width="10"/>
+          </item>
+          <item type="pixmap">
+            <normal file="curve-bottom_right.png" alpha="0"/>
+            <pos x="50%" anchor="n"/>
+          </item>
+        </box>
+      </item>
+    </box>
+  </item>
+  
+  <!-- middle box left round corners -->
+  <item type="rect">
+    <pos x="50%" y="80%" anchor="c" width="box" height="box"/>
+    <box orientation="horizontal">
+      <item type="rect">
+        <pos x="50%" anchor="n" width="box" height="box"/>
+        <box orientation="vertical">
+          <item type="pixmap">
+	    <normal file="curve-top_left.png" alpha="0"/>
+            <pos x="50%" anchor="n"/>
+          </item>
+          <item type="rect">
+	    <normal color="#000000" alpha="0"/>
+            <pos x="50%" anchor="n" height="97" width="10"/>
+          </item>
+          <item type="pixmap">
+	    <normal file="curve-bottom_left.png" alpha="0"/>
+            <pos x="50%" anchor="n"/>
+          </item>
+        </box>
+      </item>
+      
+      <!-- password box -->
+      <item type="rect">
+        <pos x="50%" y="50%" width="box" height="117" anchor="c"/>
+        <normal color="#000000" alpha="0"/>
+        <box xpadding="0" ypadding="0" spacing="5" orientation="vertical">
+          <item type="rect">
+            <pos x="0" y="0" width="box" height="box" expand="true"/>
+            <box xpadding="30" ypadding="15" spacing="10" orientation="vertical">
+              <item type="label" id="pam-prompt">
+                <pos anchor="c" x="50%" y="50%"/>
+                <normal font="Bitstream Vera Sans Bold 12" color="#ffffff"/>
+                <stock type="username-label"/>
+              </item>
+              <item type="rect">
+                <normal color="#dce2e5"/>
+                <pos width="200" height="24"/>
+                <fixed>
+                  <item type="entry" id="user-pw-entry">
+                    <pos y="0" x="0" width="0" height="0" anchor="nw"/>
+                  </item>
+                </fixed>
+              </item>
+            </box>
+          </item>
+      
+          <!-- settings -->
+          <item type="rect">
+            <pos x="0" y="0" width="100%" height="box" expand="true"/>
+            <box xpadding="10" ypadding="0" spacing="10" orientation="horizontal" homogeneous="true">
+        
+              <!-- language -->
+              <item type="rect" id="language_button" button="true">
+                <pos x="50%" y="50%" width="box" height="box" anchor="c"/>
+                <box xpadding="0" spacing="2" orientation="horizontal">
+                  <item type="pixmap">
+                    <normal file="arrow_left.png" alpha="1.00" tint="#ffffff"/>
+                    <prelight file="arrow_right.png" alpha="1.00" tint="#dce2e5"/>
+                    <active file="arrow_up.png" alpha="1.00" tint="#a9b3b7"/>
+                    <pos y="50%" anchor="w"/>
+                  </item>
+                  <item type="label">
+                    <normal font="Bitstream Vera Sans Bold 10" color="#ffffff"/>
+                    <prelight font="Bitstream Vera Sans Bold 10" color="#c1ddf2"/>
+                    <active font="Bitstream Vera Sans Bold 10" color="#ffffff"/>
+                    <pos y="50%" anchor="w"/>
+                    <stock type="language"/>
+                  </item>
+                  <item type="pixmap">
+                    <normal file="arrow_right.png" alpha="1.00" tint="#ffffff"/>
+                    <prelight file="arrow_left.png" alpha="1.00" tint="#dce2e5"/>
+                    <active file="arrow_up.png" alpha="1.00" tint="#a9b3b7"/>
+                    <pos y="50%" anchor="w"/>
+                  </item>
+                </box>
+              </item>
+    
+              <!-- session -->
+              <item type="rect" id="session_button" button="true">
+                <pos x="50%" y="50%" width="box" height="box" anchor="c"/>
+                <box xpadding="0" spacing="2" orientation="horizontal">
+                  <item type="pixmap">
+                    <normal file="arrow_left.png" alpha="1.00" tint="#ffffff"/>
+                    <prelight file="arrow_right.png" alpha="1.00" tint="#dce2e5"/>
+                    <active file="arrow_up.png" alpha="1.00" tint="#a9b3b7"/>
+                    <pos y="50%" anchor="w"/>
+                  </item>
+                  <item type="label">
+                    <normal font="Bitstream Vera Sans Bold 10" color="#ffffff"/>
+                    <prelight font="Bitstream Vera Sans Bold 10" color="#c1ddf2"/>
+                    <active font="Bitstream Vera Sans Bold 10" color="#ffffff"/>
+                    <pos y="50%" anchor="w"/>
+                    <stock type="session"/>
+                  </item>
+                  <item type="pixmap">
+                    <normal file="arrow_right.png" alpha="1.00" tint="#ffffff"/>
+                    <prelight file="arrow_left.png" alpha="1.00" tint="#dce2e5"/>
+                    <active file="arrow_up.png" alpha="1.00" tint="#a9b3b7"/>
+                    <pos y="50%" anchor="w"/>
+                  </item>
+                </box>
+              </item>
+      
+            </box>
+          </item>
+      
+        </box>
+      </item>
+
+      <!-- middle box right round corners -->
+      <item type="rect">
+        <pos x="50%" anchor="n" width="box" height="box"/>
+        <box orientation="vertical">
+          <item type="pixmap">
+            <normal file="curve-top_right.png" alpha="0"/>
+            <pos x="50%" anchor="n"/>
+          </item>
+          <item type="rect">
+            <normal color="#000000" alpha="0"/>
+            <pos x="50%" anchor="n" height="97" width="10"/>
+          </item>
+          <item type="pixmap">
+            <normal file="curve-bottom_right.png" alpha="0"/>
+            <pos x="50%" anchor="n"/>
+          </item>
+        </box>
+      </item>
+    </box>
+  </item>
+
+  <!-- timer warning -->
+  <item type="label" id="timed-label">
+    <pos x="50%" y="47%" anchor="c"/>
+    <show type="timed"/>
+    <normal font="Bitstream Vera Sans Bold 10" color="#dc292b"/>
+    <stock type="timed-label"/>
+  </item>
+
+  <!-- caps lock warning -->
+  <item type="label" id="caps-lock-warning">
+    <pos x="50%" y="50%" anchor="c"/>
+    <normal font="Bitstream Vera Sans Bold 10" color="#dc292b"/>
+    <stock type="caps-lock-warning"/>
+  </item>
+
+
+  <!-- pam error -->
+  <item type="label" id="pam-error">
+    <pos x="50%" y="53%" anchor="c" />
+    <normal font="Bitstream Vera Sans Bold 10" color="#dc292b"/>
+    <text></text>
+  </item>
+
+</greeter>

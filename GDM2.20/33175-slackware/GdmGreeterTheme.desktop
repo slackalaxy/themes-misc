@@ -1,0 +1,11 @@
+# This is not really a .desktop file like the rest, but it's useful to treat
+# it as such
+
+[GdmGreeterTheme]
+Encoding=UTF-8
+Greeter=slackware.xml
+Name=Slack off
+Description=I am totally shpongled!
+Author=solarfields
+Copyright=
+Screenshot=screenshot.png

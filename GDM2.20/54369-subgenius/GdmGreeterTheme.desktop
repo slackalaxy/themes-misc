@@ -1,0 +1,7 @@
+[GdmGreeterTheme]
+Greeter=subgenius.xml
+Name=Subgenius (wide screen)
+Description=a gdm skin for widescreen resolution, best for 1440x900
+Author=John Doe, remake of Tobias Oelgarte and final remake by Solarfields
+Copyright=(c) 2007
+Screenshot=screenshot.jpg
