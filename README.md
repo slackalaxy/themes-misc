@@ -1,1 +1,1 @@
-##Collection of varions theme modifications##
+## Collection of varions theme modifications
