@@ -1,0 +1,8 @@
+One of my all time favourite GTK2 themes is the good old Industrial,
+part of the gtk-engines. Unfortunatelly, there is no port to GTK3 and
+seems there will not be.
+
+What I do is, let XFCE apply Adwaita for the few GTK3 applications I use
+and select a GTK2 theme with a similar colour scheme for the rest. The
+colours of the Industrial theme do not match very well Adwaita’s, so I
+decided to modify it.
