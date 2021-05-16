@@ -1,10 +1,10 @@
 ## Collection of various theme modifications
 
-**biolang-medit**
+**biolang-medit**  
 FASTA files colouring of DNA and amino acid sequences for Medit.
 
-**Industrial-grey**
+**Industrial-grey**  
 Modification of Industrial GTK2 theme to follow Adwaita (no longer fits its colour scheme, though...)
 
-**Murrine-LightBlue**
+**Murrine-LightBlue**  
 Modification of Murrine Light theme
