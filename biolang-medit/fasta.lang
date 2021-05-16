@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright 2017 Petar Petrov slackalaxy@gmail.com
+ All rights reserved.
+
+ Thanks to https://github.com/wrf/fastalang
+
+ Redistribution and use of this script, with or without modification, is
+ permitted provided that the following conditions are met:
+
+ 1. Redistributions of this script must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+
+  THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR IMPLIED
+  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO
+  EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<language id="fasta" _name="FASTA" version="2.0" _section="Scientific">
+	<metadata>
+		<property name="mimetypes">text/fasta</property>
+		<property name="globs">*.fa;*.faa;*.fst;*.fas;*.fasta</property>
+	</metadata>
+    <styles>
+		<style id="header" _name="Header" map-to="def:type"/>
+		<style id="a" _name="Ala (alanine) or A (adenine)" map-to="fasta:a"/>
+		<style id="c" _name="Cys (cysteine) or C (cytosine)" map-to="fasta:c"/>
+		<style id="g" _name="Gly (glycine) or G (guanine)" map-to="fasta:g"/>
+		<style id="t" _name="Thr (threonine) or T (thymine)" map-to="fasta:t"/>
+		<style id="n" _name="Asn (Asparagine) or any Nucleotide" map-to="fasta:n"/>
+		<style id="r" _name="Arg (Arginine)" map-to="fasta:r"/>
+		<style id="d" _name="Asn (Aspartic acid)" map-to="fasta:d"/>
+		<style id="q" _name="Gln (Glutamine)" map-to="fasta:q"/>
+		<style id="e" _name="Glu (Glutamic acid)" map-to="fasta:e"/>
+		<style id="h" _name="His (Histidine)" map-to="fasta:h"/>
+		<style id="i" _name="Ile (Isoleucine)" map-to="fasta:i"/>
+		<style id="l" _name="Leu (Leucine)" map-to="fasta:l"/>
+		<style id="k" _name="Lys (Lysine)" map-to="fasta:k"/>
+		<style id="m" _name="Met (Methionine)" map-to="fasta:m"/>
+		<style id="f" _name="Phe (Phenylalanine)" map-to="fasta:f"/>
+		<style id="p" _name="Pro (Proline)" map-to="fasta:p"/>
+		<style id="s" _name="Ser (Serine)" map-to="fasta:s"/>
+		<style id="w" _name="Trp (Tryptophan)" map-to="fasta:w"/>
+		<style id="y" _name="Tyr (Tyrosine)" map-to="fasta:y"/>
+		<style id="v" _name="Val (Valine)" map-to="fasta:v"/>
+		<style id="x" _name="Any amino acid or not nucleotide" map-to="def:x"/>
+
+    </styles>
+
+	<default-regex-options case-sensitive="false"/>
+	<definitions>
+		<context id="header" style-ref="header" end-at-line-end="true">
+			<start>&gt;</start>
+		</context>
+
+		<context id="a" style-ref="a">
+			<match>[A]+</match>
+		</context>
+
+		<context id="c" style-ref="c">
+			<match>[C]+</match>
+		</context>
+
+		<context id="g" style-ref="g">
+			<match>[G]+</match>
+		</context>
+
+		<context id="t" style-ref="t">
+			<match>[TU]+</match>
+		</context>
+
+		<context id="n" style-ref="n">
+			<match>[N]+</match>
+		</context>
+
+		<context id="r" style-ref="r">
+			<match>[R]+</match>
+		</context>
+		
+		<context id="d" style-ref="d">
+			<match>[D]+</match>
+		</context>
+		
+		<context id="q" style-ref="q">
+			<match>[Q]+</match>
+		</context>
+
+		<context id="e" style-ref="e">
+			<match>[E]+</match>
+		</context>
+		
+		<context id="h" style-ref="h">
+			<match>[H]+</match>
+		</context>
+
+		<context id="i" style-ref="i">
+			<match>[I]+</match>
+		</context>
+
+		<context id="l" style-ref="l">
+			<match>[L]+</match>
+		</context>
+		
+		<context id="k" style-ref="k">
+			<match>[K]+</match>
+		</context>
+		
+		<context id="m" style-ref="m">
+			<match>[M]+</match>
+		</context>
+
+		<context id="f" style-ref="f">
+			<match>[F]+</match>
+		</context>
+		
+		<context id="p" style-ref="p">
+			<match>[P]+</match>
+		</context>
+
+		<context id="s" style-ref="s">
+			<match>[S]+</match>
+		</context>
+		
+		<context id="w" style-ref="w">
+			<match>[W]+</match>
+		</context>
+		
+		<context id="y" style-ref="y">
+			<match>[Y]+</match>
+		</context>
+
+		<context id="v" style-ref="v">
+			<match>[V]+</match>
+		</context>
+		
+		<context id="x" style-ref="x">
+			<match>[X]+</match>
+		</context>
+
+		<context id="fasta">
+			<include>
+				<context ref="header"/>
+				<context ref="a"/>
+				<context ref="c"/>
+				<context ref="g"/>
+				<context ref="t"/>
+				<context ref="n"/>
+				<context ref="r"/>
+				<context ref="d"/>
+				<context ref="q"/>
+				<context ref="e"/>
+				<context ref="h"/>
+				<context ref="i"/>
+				<context ref="l"/>
+				<context ref="k"/>
+				<context ref="m"/>
+				<context ref="f"/>
+				<context ref="p"/>
+				<context ref="s"/>
+				<context ref="w"/>
+				<context ref="y"/>
+				<context ref="v"/>
+				<context ref="x"/>
+			</include>
+		</context>
+	</definitions>
+</language>
